@@ -41,7 +41,7 @@ function styleGenerator(mode: "light" | "dark") {
 
 export default function Editor({
   trigger,
-  theme='dark',
+  theme = "dark",
 }: {
   trigger: () => void;
   theme: "dark" | "light";
@@ -155,9 +155,9 @@ export default function Editor({
         <div
           className={`flex border-r-2 ${borderColorStyle} items-center px-5 gap-3`}
         >
-          {[1, 2, 3].map((e, index) => (
+          {[1, 2, 3].map((e) => (
             <div
-              key={index}
+              key={e}
               className={`rounded-full ${buttonColorStyle} w-[15px] h-[15px]`}
             ></div>
           ))}

@@ -42,7 +42,7 @@ export default function BrowserUi({
         <div className={`flex  ${borderColorStyle} items-center px-5 gap-3`}>
           {[1, 2, 3].map((element, index) => (
             <div
-              key={index}
+              key={`${index}-${element}`}
               className={`rounded-full ${buttonColorStyle} w-[15px] h-[15px]`}
             ></div>
           ))}

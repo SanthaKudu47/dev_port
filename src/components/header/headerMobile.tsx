@@ -16,7 +16,7 @@ function stylesGenerator(mode = "dark") {
 
 function HeaderMobile({ theme }: { theme: "dark" | "light" }) {
   const dispatch = useContext(ThemeContextDispatchContext);
-  const { color, borderColor } = stylesGenerator(theme);
+  const { color} = stylesGenerator(theme);
 
   function changeTheme(event: React.MouseEvent<HTMLDivElement, MouseEvent>) {
     event.preventDefault();
