@@ -26,27 +26,25 @@ export default function SectionFour({
         ones showcased in this site, please contact me!
       </Paragraph>
       <div className="mt-10 mb-4 gap-3 flex flex-col">
-      <ProjectInfoCard
-        thumbnailUrl=""
-        projectName="Shushi"
-        projectDescription="I have built various different projects to fit different aspects of the client's business. If you want to see more examples of my work than the ones showcased in this site"
-        stack={["JavaScript", "HTML5", "Css3", "JavaScript", "HTML5", "Css3"]}
-      />
         <ProjectInfoCard
-        thumbnailUrl=""
-        projectName="Shushi"
-        projectDescription="I have built various different projects to fit different aspects of the client's business. If you want to see more examples of my work than the ones showcased in this site"
-        stack={["JavaScript", "HTML5", "Css3", "JavaScript", "HTML5", "Css3"]}
-      />
+          theme={theme}
+          projectName="Shushi"
+          projectDescription="I have built various different projects to fit different aspects of the client's business. If you want to see more examples of my work than the ones showcased in this site"
+          stack={["JavaScript", "HTML5", "Css3", "JavaScript", "HTML5", "Css3"]}
+        />
         <ProjectInfoCard
-        thumbnailUrl=""
-        projectName="Shushi"
-        projectDescription="I have built various different projects to fit different aspects of the client's business. If you want to see more examples of my work than the ones showcased in this site"
-        stack={["JavaScript", "HTML5", "Css3", "JavaScript", "HTML5", "Css3"]}
-      />
+          theme={theme}
+          projectName="Shushi"
+          projectDescription="I have built various different projects to fit different aspects of the client's business. If you want to see more examples of my work than the ones showcased in this site"
+          stack={["JavaScript", "HTML5", "Css3", "JavaScript", "HTML5", "Css3"]}
+        />
+        <ProjectInfoCard
+          theme={theme}
+          projectName="Shushi"
+          projectDescription="I have built various different projects to fit different aspects of the client's business. If you want to see more examples of my work than the ones showcased in this site"
+          stack={["JavaScript", "HTML5", "Css3", "JavaScript", "HTML5", "Css3"]}
+        />
       </div>
-
-     
     </SectionWrapper>
   );
 }
