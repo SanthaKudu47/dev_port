@@ -1,6 +1,8 @@
 import { Paragraph } from "../common/paragraph";
 import SectionWrapper from "../common/sectionWrapper";
 import Title from "../common/title";
+import { paths } from "./data";
+import SkillItem from "./skillItem";
 
 function stylesGenerator(theme = "dark") {
   return {
@@ -26,6 +28,13 @@ export default function SectionThree({
         {`HTML, CSS, JS, building small and medium web applications with Vue or React, custom plugins, features, animations, and coding interactive layouts. I have also full-stack developer experience with one of the most popular open source CMS on the 
 web - WordPress.`}
       </Paragraph>
+      <div className="grid grid-cols-2 justify-items-center mt-8 mb-3 gap-y-2">
+        {paths.map((p, index) => (
+          <SkillItem key={index} skillData={p} theme={theme} />
+        ))}
+      </div>
+
+      <></>
     </SectionWrapper>
   );
 }
