@@ -1,6 +1,5 @@
 import SectionWrapper from "../common/sectionWrapper";
 import Title from "../common/title";
-import emailIcon from "@assets/email.svg";
 import Contact from "./contact";
 import { contactData } from "./data";
 
@@ -24,7 +23,8 @@ export default function SectionFive({
 
       <div className="flex flex-col gap-5 mt-5">
         {contactData.map((data, index) => (
-          <Contact key={index}
+          <Contact
+            key={index}
             contact={data.contact}
             type={data.type}
             theme={theme}
