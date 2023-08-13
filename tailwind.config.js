@@ -13,6 +13,7 @@ export default {
         dark_text_light_blue: "#00CFDC",
         dark_address_bar_bg: "#333439",
         dark_ui_bg: "#1F1F24",
+        dark_2: "#222328",
         dark_1: "#4CD86B",
         light_primary: "#EAEDF5",
         light_secondary: "#3E9AA0",
@@ -21,6 +22,7 @@ export default {
         light_3: "#0F8289",
         light_4: "#4F71E9",
         light_5: "#E44444",
+        light_6: "#9AA4BD",
       },
       fontFamily: {
         "code-font": ["'Roboto Mono'", "monospace"],
