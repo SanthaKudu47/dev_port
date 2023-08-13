@@ -38,8 +38,9 @@ export default function SkillItem({
           </div>
           <div className="flex w-full justify-center items-center p-1 ">
             <svg fill="none" viewBox="0 0 256 256" height="90%" width="90%">
-              {skillData.paths.map((p) => (
+              {skillData.paths.map((p,index) => (
                 <path
+                key={index}
                   fill={fillColor}
                   fillRule="evenodd"
                   d={p}
