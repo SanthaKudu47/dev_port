@@ -5,6 +5,7 @@ import SectionTwo from "../sectionTwo";
 import { SectionOne } from "../sectionOne";
 import SectionThree from "../sectionThree";
 import SectionFour from "../sectionFour";
+import SectionFive from "../sectionFive";
 
 export default function Main() {
   const theme = useContext(ThemeContext);
@@ -15,6 +16,7 @@ export default function Main() {
       <SectionTwo theme={theme} />
       <SectionThree theme={theme} />
       <SectionFour theme={theme} />
+      <SectionFive theme={theme} />
     </>
   );
 }
