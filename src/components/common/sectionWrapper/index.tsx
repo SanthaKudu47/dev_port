@@ -12,6 +12,10 @@ export default function SectionWrapper({
 }) {
   const { bgColorStyle } = styleGenerator(theme);
   return (
-    <div className={`py-6 px-3 ${bgColorStyle} flex flex-col`}>{children}</div>
+    <div
+      className={`py-6 px-3 ${bgColorStyle} flex flex-col md:max-w-screen-xl  mx-auto`}
+    >
+      {children}
+    </div>
   );
 }

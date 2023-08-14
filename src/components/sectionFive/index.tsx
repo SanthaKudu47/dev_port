@@ -17,11 +17,12 @@ export default function SectionFive({
   const { textColorStyle } = stylesGenerator(theme);
   return (
     <SectionWrapper theme={theme}>
-      <Title fontSize={57} textColorStyle={textColorStyle}>
+      {/* <div></div>
+      <Title textColorStyle={textColorStyle}>
         Contact
-      </Title>
+      </Title> */}
 
-      <div className="flex flex-col gap-5 mt-5">
+      <div className="flex flex-col md:flex-row gap-5 mt-5">
         {contactData.map((data, index) => (
           <Contact
             key={index}

@@ -8,7 +8,7 @@ function typeContent(
   stepper: () => void
 ) {
   if (contentToBeTyped.split("").length != typedContent.length) {
-    console.log("typing", typedContent, contentToBeTyped);
+   // console.log("typing", typedContent, contentToBeTyped);
     return setTimeout(() => {
       const newValue = typedContent + contentToBeTyped[typedContent.length];
       handler(newValue);
@@ -24,9 +24,9 @@ function styleGenerator(mode: "light" | "dark") {
   return {
     bgColorStyle: mode === "dark" ? "bg-dark_primary" : "bg-light_primary",
     borderColorStyle:
-      mode === "dark" ? "border-dark_white" : "border-dark_primary",
+      mode === "dark" ? "border-dark_secondary" : "border-dark_primary",
     textColorStyle: mode === "dark" ? "text-dark_white" : "text-dark_primary",
-    buttonColorStyle: mode === "dark" ? "bg-light_primary" : "bg-dark_primary",
+    buttonColorStyle: mode === "dark" ? "bg-dark_secondary" : "bg-dark_primary",
     itemContainerBgStyle:
       mode === "dark" ? "bg-dark_ui_bg" : "bg-light_secondary",
     itemColor: mode === "dark" ? "#4CD86B" : "#18191C",
@@ -86,7 +86,7 @@ export default function Editor({
   //styles
 
   useEffect(() => {
-    console.log("Running");
+    //console.log("Running");
     switch (steps) {
       case 0:
         timer.current = typeContent(
@@ -101,7 +101,7 @@ export default function Editor({
         break;
 
       case 1:
-        console.log("phase 2");
+        //console.log("phase 2");
         timer.current = typeContent(
           "<Layout>",
           content.line1p2,
@@ -114,14 +114,14 @@ export default function Editor({
         break;
 
       case 2:
-        console.log("phase 2");
+        //console.log("phase 2");
         setContent({ ...content, line3: "</Layout>" });
         setSteps(3);
         trigger();
         break;
 
       case 3:
-        console.log("phase 3");
+        //console.log("phase 3");
         timer.current = typeContent(
           "<Product details={data} />",
           content.line2,
@@ -141,7 +141,7 @@ export default function Editor({
     return () => {
       if (timer.current == null) return;
       clearTimeout(timer.current);
-      console.log("Need to Clear", timer.current);
+      //console.log("Need to Clear", timer.current);
     };
   }, [content, steps]);
 

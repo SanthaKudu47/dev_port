@@ -12,19 +12,21 @@ function SectionTwo({ theme = "dark" }: { theme: "dark" | "light" }) {
   const { textColorStyle } = stylesGenerator(theme);
   return (
     <SectionWrapper theme={theme}>
-      <div>
-        <Title fontSize={29} textColorStyle={textColorStyle}>
-          Hi, I'm Sahan, Junior Full Stack Engineer
-        </Title>
-      </div>
-      <div>
-        <Paragraph fontSize={20} textColorStyle={textColorStyle}>
-          Professionally connected with the web development industry.Problem
-          solver, well-organized person, loyal employee with high attention to
-          detail.Fan of Boxing, outdoor activities, video games, and coding of
-          course.Interested in the entire front-end spectrum and working on
-          ambitious projects with interesting people.
-        </Paragraph>
+      <div className="grid grid-cols-1 md:grid-cols-12 my-2 md:my-5 items-center gap-10">
+        <div className="col-span-5">
+          <Title  textColorStyle={textColorStyle}>
+            Hi, I'm Sahan, Junior Full Stack Engineer
+          </Title>
+        </div>
+        <div className="col-span-7">
+          <Paragraph fontSize={20} textColorStyle={textColorStyle}>
+            Professionally connected with the web development industry.Problem
+            solver, well-organized person, loyal employee with high attention to
+            detail.Fan of Boxing, outdoor activities, video games, and coding of
+            course.Interested in the entire front-end spectrum and working on
+            ambitious projects with interesting people.
+          </Paragraph>
+        </div>
       </div>
     </SectionWrapper>
   );
