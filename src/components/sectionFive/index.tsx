@@ -1,20 +1,20 @@
 import SectionWrapper from "../common/sectionWrapper";
-import Title from "../common/title";
+//import Title from "../common/title";
 import Contact from "./contact";
 import { contactData } from "./data";
 
-function stylesGenerator(theme = "dark") {
-  return {
-    textColorStyle: theme === "dark" ? "text-white" : "text-dark_primary",
-  };
-}
+// function stylesGenerator(theme = "dark") {
+//   return {
+//     textColorStyle: theme === "dark" ? "text-white" : "text-dark_primary",
+//   };
+// }
 
 export default function SectionFive({
   theme = "dark",
 }: {
   theme: "dark" | "light";
 }) {
-  const { textColorStyle } = stylesGenerator(theme);
+  // const { textColorStyle } = stylesGenerator(theme);
   return (
     <SectionWrapper theme={theme}>
       {/* <div></div>

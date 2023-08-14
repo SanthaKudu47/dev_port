@@ -90,7 +90,7 @@ export default function SectionFour({
           setProjectDetails(newData);
           setDataLoadingStatus(false);
         })
-        .catch((err) => console.log("Failed to Load data"));
+        .catch((err) => console.log("Failed to Load data",err));
     }
   }, []);
 

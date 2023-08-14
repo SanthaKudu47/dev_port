@@ -48,7 +48,7 @@ export default function SectionThree({
           setSkillData(newData);
           setDataLoadingStatus(false);
         })
-        .catch((err) => console.log("Failed to fetch data"));
+        .catch((err) => console.log("Failed to fetch data",err));
     }
   }, []);
   return (
