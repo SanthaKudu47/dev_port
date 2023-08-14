@@ -11,7 +11,9 @@ function SectionOne({ theme }: { theme: "dark" | "light" }) {
   const { bgColorStyle } = styleGenerator(theme);
 
   return (
-    <div className={`py-6 px-3 ${bgColorStyle} flex flex-col`}>
+    <div
+      className={`pt-6 pb-6 px-3 md:pt-[70px]  ${bgColorStyle} grid grid-cols-1 md:grid-cols-12 max-w-screen-xl mx-auto md:gap-10 items-center`}
+    >
       <Content theme={theme} />
       <MainArtWorkMobile theme={theme} />
     </div>

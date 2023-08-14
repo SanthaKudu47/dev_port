@@ -4,9 +4,9 @@ function styleGenerator(mode: "light" | "dark") {
   return {
     bgColorStyle: mode === "dark" ? "bg-dark_primary" : "bg-light_primary",
     borderColorStyle:
-      mode === "dark" ? "border-dark_white" : "border-dark_primary",
+      mode === "dark" ? "border-dark_secondary" : "border-dark_primary",
     textColorStyle: mode === "dark" ? "text-dark_white" : "text-dark_primary",
-    buttonColorStyle: mode === "dark" ? "bg-light_primary" : "bg-dark_primary",
+    buttonColorStyle: mode === "dark" ? "bg-dark_secondary" : "bg-dark_primary",
     addressBarColorStyle:
       mode === "dark" ? "bg-dark_address_bar_bg" : "bg-light_1",
     itemContainerBgStyle:

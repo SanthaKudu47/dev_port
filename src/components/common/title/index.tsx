@@ -1,16 +1,13 @@
 function Title({
   textColorStyle,
-  fontSize,
   children,
 }: {
   textColorStyle: string;
-  fontSize: number;
   children: any;
 }) {
   return (
     <h1
-      style={{ fontSize: `${fontSize}px` }}
-      className={`font-primary-font font-bold leading-none ${textColorStyle} mt-4`}
+      className={`font-primary-font font-bold leading-none ${textColorStyle} mt-4 text-[45px] md:text-[57px]`}
     >
       {children}
     </h1>
