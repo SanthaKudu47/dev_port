@@ -33,8 +33,6 @@ export default function SectionThree({
       client
         .fetch<ApiData[]>(query)
         .then((data) => {
-
-        
           if (data.length === 0) {
             setSkillData(paths);
             setDataLoadingStatus(false);
@@ -42,17 +40,14 @@ export default function SectionThree({
           }
           const newData: SkillData[] = [];
           data.map((d) => newData.push({ skill: d.name, paths: d.svg_path }));
-          console.log(data[0].svg_path);
-          console.log(newData);
-
           setSkillData(newData);
           setDataLoadingStatus(false);
         })
-        .catch((err) => console.log("Failed to fetch data",err));
+        .catch((err) => console.log("Failed to fetch data", err));
     }
   }, []);
   return (
-    <SectionWrapper theme={theme}>
+    <SectionWrapper id="section3" theme={theme}>
       <div className="flex flex-col  items-start md:items-center">
         <Title textColorStyle={textColorStyle}>Skills & Experience</Title>
         <Paragraph fontSize={20} textColorStyle={textColorStyle}>
@@ -66,13 +61,13 @@ web - WordPress.`}
       {/* justify-items-center grid grid-cols-2 md:grid-cols-1    mt-8 mb-3 gap-y-2 bg-slate-400 */}
       <div className="flex flex-row flex-wrap gap-14 md:gap-10 justify-center mt-8 mb-3 gap-y-2 md:gap-y-5">
         {isDataLoading &&
-          paths.map((p,index) => {
+          paths.map((p, index) => {
             return <SkillSkelton key={`${p.paths}_${index}`} />;
           })}
-          {!isDataLoading && skillData.map((p, index) => (
-          <SkillItem key={index} skillData={p} theme={theme} />
-        ))}
-       
+        {!isDataLoading &&
+          skillData.map((p, index) => (
+            <SkillItem key={index} skillData={p} theme={theme} />
+          ))}
       </div>
     </SectionWrapper>
   );

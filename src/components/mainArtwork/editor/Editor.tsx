@@ -14,7 +14,7 @@ function typeContent(
       handler(newValue);
     }, duration);
   } else {
-    console.log("finished typing....", stepper);
+    //console.log("finished typing....", stepper);
     stepper();
     return null;
   }

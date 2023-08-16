@@ -18,17 +18,18 @@ function Content({ theme }: { theme: "dark" | "light" }) {
         <LogoV1 theme={theme} />
       </div>
 
-      <Title  textColorStyle={textColorStyle}>
-        Full Stack Developer
-      </Title>
+      <Title textColorStyle={textColorStyle}>Full Stack Developer</Title>
       <Paragraph fontSize={20} textColorStyle={textColorStyle}>
-        Resolving design problems, building smart user interfaces and useful
+        {/* Resolving design problems, building smart user interfaces and useful
         interactions, developing rich web applications and seamless web
+        experiences.  */}
+        Let's turn ideas into reality! From stunning front-end interfaces, to
+        robust back-end systems. building seamless, engaging, and dynamic web
         experiences.
       </Paragraph>
 
       <div
-        className={`my-3 font-code-font ${buttonTextStyle} font-bold text-[15px]`}
+        className={`my-3 font-code-font ${buttonTextStyle} font-bold  text-[18px] md:text-[22px]`}
       >{`aboutMe();`}</div>
     </div>
   );

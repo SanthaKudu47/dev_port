@@ -3,12 +3,13 @@ import { Paragraph } from "../common/paragraph";
 import SectionWrapper from "../common/sectionWrapper";
 import Title from "../common/title";
 import { ProjectDataInterface, projectData } from "./data";
-
 import { ProjectInfoCard, ProjectInfoCardWeb } from "./projectInfoCard/card";
-
 import { client } from "@src/utils/sanityClient";
 import imageUrlBuilder from "@sanity/image-url";
-import { ProjectCardSkeltonDesktop, ProjectCardSkeltonMobile } from "./projectInfoCard/skelton";
+import {
+  ProjectCardSkeltonDesktop,
+  ProjectCardSkeltonMobile,
+} from "./projectInfoCard/skelton";
 
 function stylesGenerator(theme = "dark") {
   return {
@@ -90,12 +91,12 @@ export default function SectionFour({
           setProjectDetails(newData);
           setDataLoadingStatus(false);
         })
-        .catch((err) => console.log("Failed to Load data",err));
+        .catch((err) => console.log("Failed to Load data", err));
     }
   }, []);
 
   return (
-    <SectionWrapper theme={theme}>
+    <SectionWrapper id="section4" theme={theme}>
       <div className="flex flex-col  items-start md:items-center">
         <Title textColorStyle={textColorStyle}>Previous Projects</Title>
         <Paragraph fontSize={20} textColorStyle={textColorStyle}>
@@ -106,19 +107,20 @@ export default function SectionFour({
       </div>
 
       <div className="mt-10 mb-4 gap-3 flex flex-col md:flex-row flex-wrap md:hidden">
-        {isDataLoading && <ProjectCardSkeltonMobile/>}
-        {!isDataLoading  && projectDetails.map((data, index) => (
-          <ProjectInfoCard
-            repo={data.repo}
-            link={data.link}
-            key={index}
-            thumbnailUrl={data.mobile}
-            theme={theme}
-            projectName={data.projectName}
-            projectDescription={data.projectDescription}
-            stack={data.stack}
-          />
-        ))}
+        {isDataLoading && <ProjectCardSkeltonMobile />}
+        {!isDataLoading &&
+          projectDetails.map((data, index) => (
+            <ProjectInfoCard
+              repo={data.repo}
+              link={data.link}
+              key={index}
+              thumbnailUrl={data.mobile}
+              theme={theme}
+              projectName={data.projectName}
+              projectDescription={data.projectDescription}
+              stack={data.stack}
+            />
+          ))}
       </div>
       <div className=" flex-col gap-5 justify-center mx-auto mt-10 hidden md:flex">
         {isDataLoading && <ProjectCardSkeltonDesktop />}

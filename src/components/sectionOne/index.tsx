@@ -12,6 +12,7 @@ function SectionOne({ theme }: { theme: "dark" | "light" }) {
 
   return (
     <div
+    id="section1"
       className={`pt-6 pb-6 px-3 md:pt-[70px]  ${bgColorStyle} grid grid-cols-1 md:grid-cols-12 max-w-screen-xl mx-auto md:gap-10 items-center`}
     >
       <Content theme={theme} />
