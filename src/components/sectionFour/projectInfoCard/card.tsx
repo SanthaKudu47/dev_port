@@ -114,7 +114,7 @@ function ProjectInfoCardWeb({
   const { bgColor, textColor, iconColor, chipColor, chipTextColor } =
     stylesGenerator(theme);
   return (
-    <div className={`flex rounded-md relative ${bgColor} ${textColor} gap-x-5 max-w-[800px] px-1`}>
+    <div className={`flex rounded-md relative ${bgColor} ${textColor} gap-x-5 max-w-[800px] px-2 pt-3`}>
       <div className="absolute top-1 left-1">
         <svg
           width="20"

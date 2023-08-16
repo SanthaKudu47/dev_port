@@ -1,6 +1,6 @@
 export default function LightMode({ width = 20, height = 20 }) {
   return (
-    <>
+    <div className="relative">
       <svg
         width={width}
         height={height}
@@ -36,6 +36,6 @@ export default function LightMode({ width = 20, height = 20 }) {
           fill="white"
         />
       </svg>
-    </>
+    </div>
   );
 }

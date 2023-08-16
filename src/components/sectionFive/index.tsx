@@ -16,7 +16,7 @@ export default function SectionFive({
 }) {
   // const { textColorStyle } = stylesGenerator(theme);
   return (
-    <SectionWrapper theme={theme}>
+    <SectionWrapper id="section5" theme={theme}>
       {/* <div></div>
       <Title textColorStyle={textColorStyle}>
         Contact
