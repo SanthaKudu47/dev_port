@@ -100,9 +100,7 @@ export default function SectionFour({
       <div className="flex flex-col  items-start md:items-center">
         <Title textColorStyle={textColorStyle}>Previous Projects</Title>
         <Paragraph fontSize={20} textColorStyle={textColorStyle}>
-          I have built various different projects to fit different aspects of
-          the client's business. If you want to see more examples of my work
-          than the ones showcased in this site, please contact me!
+        Welcome to the heart of my portfolio, where I present a selection of my personal projects. Each project featured here represents a unique journey of creativity, problem-solving, and skill application. As you explore these endeavors, you'll gain insights into my works, and the range of challenges I've successfully tackled.
         </Paragraph>
       </div>
 

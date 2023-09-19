@@ -51,11 +51,10 @@ export default function SectionThree({
       <div className="flex flex-col  items-start md:items-center">
         <Title textColorStyle={textColorStyle}>Skills & Experience</Title>
         <Paragraph fontSize={20} textColorStyle={textColorStyle}>
-          {`The main area of expertise is front end development (client side of the web).`}
+          {`Combines following technical and soft skills to create end-to-end web solutions that deliver a seamless user experience while ensuring the functionality, security, and performance of the application.`}
         </Paragraph>
         <Paragraph fontSize={20} textColorStyle={textColorStyle}>
-          {`HTML, CSS, JS, building small and medium web applications with Vue or React, custom plugins, features, animations, and coding interactive layouts. I have also full-stack developer experience with one of the most popular open source CMS on the 
-web - WordPress.`}
+          {`HTML, CSS, JS, building small and medium web applications with  React, features, animations, and coding interactive layouts. I have also full-stack developer experience with one of the most popular back-end run times like nodeJS and frameworks like express , Nest js`}
         </Paragraph>
       </div>
       {/* justify-items-center grid grid-cols-2 md:grid-cols-1    mt-8 mb-3 gap-y-2 bg-slate-400 */}
