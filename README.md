@@ -1,27 +1,151 @@
-# React + TypeScript + Vite
+# 📄 dev_port — Developer Portfolio (React + TypeScript + Sanity CMS)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, dark‑themed developer portfolio built with **React**, **TypeScript**, **Vite**, and **TailwindCSS**, powered by **Sanity CMS** for dynamic content management.  
+Showcases projects, skills, and experience with a clean, developer‑centric UI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
+- Fully responsive, modern developer portfolio  
+- Dynamic **Projects** section powered by Sanity CMS  
+- Dynamic **Skills** section powered by Sanity CMS  
+- Clean, dark UI with developer‑themed visuals  
+- Fast build + dev environment using **Vite**  
+- Type‑safe codebase using **TypeScript**  
+- Optimized images using **Sanity Image Builder**  
+- Modular, maintainable component structure  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🧠 Tech Stack
 
-- Configure the top-level `parserOptions` property like this:
+### Frontend
+- React 18  
+- TypeScript  
+- Vite  
+- TailwindCSS  
+- ESLint + TypeScript rules  
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+### Backend (Headless CMS)
+- Sanity CMS v3  
+- Sanity Client (`@sanity/client`)  
+- Sanity Image URL Builder (`@sanity/image-url`)  
+
+---
+
+## 🖼 Screenshots
+(Add your screenshots here)
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/<your-username>/dev_port
+cd dev_port
+npm install
+npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+---
+
+## 🔌 Environment Variables
+
+Create a `.env` file in the project root:
+
+```
+VITE_SANITY_PROJECT_ID=your_project_id
+VITE_SANITY_DATASET=production
+VITE_SANITY_API_VERSION=2023-01-01
+```
+
+Optional (if using tokens):
+
+```
+VITE_SANITY_TOKEN=your_sanity_token
+```
+
+---
+
+## 🗂 Sanity CMS Setup
+
+### 1. Install Sanity CLI
+```bash
+npm install -g @sanity/cli
+```
+
+### 2. Initialize Sanity Studio
+```bash
+sanity init
+```
+
+### 3. Schemas used in this project
+
+#### Project Schema
+- title  
+- description  
+- thumbnail  
+- tags  
+- tech stack  
+- project link  
+
+#### Skill Schema
+- skill name  
+- icon  
+- category  
+
+---
+
+## 🔄 Fetching Data (Frontend)
+
+### Sanity Client Setup
+```ts
+import { createClient } from "@sanity/client";
+
+export const client = createClient({
+  projectId: import.meta.env.VITE_SANITY_PROJECT_ID,
+  dataset: import.meta.env.VITE_SANITY_DATASET,
+  apiVersion: import.meta.env.VITE_SANITY_API_VERSION,
+  useCdn: true,
+});
+```
+
+### Example GROQ Query
+```ts
+const projects = await client.fetch(`*[_type == "project"] | order(order asc)`);
+```
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+  components/
+  sections/
+  sanity/
+  utils/
+  assets/
+  App.tsx
+  main.tsx
+```
+
+---
+
+## 🛣 Roadmap
+- Add blog section  
+- Add animations (Framer Motion or GSAP)  
+- Add dark/light theme toggle  
+- Add contact form with backend integration  
+
+---
+
+## 📄 License
+MIT License
+
+---
+
+## 👤 Author
+**Sahan** — Full Stack Developer  
+GitHub: https://github.com/<your-username>  
+Portfolio: (add link)
